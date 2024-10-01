@@ -2,21 +2,34 @@ package Practical_1;
 
 // 1. Create an ArrayList of type Interger, add element into it traverse the arraylist and print the elements
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class A1First {
+
+
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
-        list.add(50);
+        Scanner sc = new Scanner(System.in);
 
-        // Printing the arraylist object
-        System.out.println("Printing elements from the array");
 
-        for (Integer a1 : list) {
-            System.out.println(a1);
+        System.out.println("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+
+        ArrayList<Integer> a1 = new ArrayList<Integer>();
+
+
+        System.out.println("Enter elements for the array: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter element " + (i + 1) + ": ");
+            int element = sc.nextInt();
+            a1.add(element);
+        }
+
+
+        System.out.println("Elements of the ArrayList are: ");
+        for (int i = 0; i < a1.size(); i++) {
+            System.out.println(a1.get(i));
         }
     }
 }
